@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+
+jobs:
+  build:
+  
+    runs-on: ubuntu-latest
+
+    
+    steps:
+      # step1
+      - uses: actions/checkout@v3
+
+      # step2
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # step3
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
